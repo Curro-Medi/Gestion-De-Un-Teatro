@@ -1,0 +1,123 @@
+﻿<Window x:Class="Practica_4_teatro.Teatro"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practica_4_teatro"
+        mc:Ignorable="d"
+        Title="Teatro" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Image Margin="-148,-67,-157.4,-14" Source="fondoteatro.jpg" Stretch="Fill"/>
+
+        <Label Content="FILAS" HorizontalAlignment="Left" Margin="45,107,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+        <Label Content="COLUMNAS" HorizontalAlignment="Left" Margin="154,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="172,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Label Content="1" HorizontalAlignment="Left" Margin="128,107,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="358,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="296,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="234,54,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="128,279,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="128,215,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="128,161,0,0" VerticalAlignment="Top" Foreground="White" FontSize="16" Width="21"/>
+        <Button Content="Cancelar y salir" HorizontalAlignment="Left" Margin="664,363,0,0" VerticalAlignment="Top" Width="95" Height="27" Background="White" Click="Button_Click"/>
+        <Button x:Name="reservar" Content="Reservar" HorizontalAlignment="Left" Margin="475,229,0,0" VerticalAlignment="Top" Width="93" Height="26" Background="Yellow" Click="reservar_Click"/>
+        <Button x:Name="btncomprar" Content="Comprar" HorizontalAlignment="Left" Margin="475,132,0,0" VerticalAlignment="Top" Width="93" Height="26" Background="ForestGreen" Click="btncomprar_Click" />
+        <Button x:Name="btnanularcompra" Content="Anular compra" HorizontalAlignment="Left" Height="26" Margin="635,132,0,0" VerticalAlignment="Top" Width="93" Background="DarkGreen" Click="btnanularcompra_Click" />
+        <Button x:Name="btnanularreserva" Content="Anular reserva" HorizontalAlignment="Left" Height="26" Margin="635,229,0,0" VerticalAlignment="Top" Width="93" Background="LightGoldenrodYellow" Click="btnanularreserva_Click"/>
+
+        <Grid Margin="154,91,391.6,98">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="58*"/>
+                <RowDefinition Height="54*"/>
+                <RowDefinition Height="65*"/>
+                <RowDefinition Height="55*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="62*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="63*"/>
+                <ColumnDefinition Width="63*"/>
+            </Grid.ColumnDefinitions>
+            <Button  x:Name="c1f1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="57" Height="54" Click="c1f1_Click" Grid.Column="0" Grid.Row="0" Loaded="c1f1_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c1f2" HorizontalAlignment="Left" Margin="0,1.4,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c1f2_Click" Grid.Column="0" Grid.Row="1"  Loaded="c1f2_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c1f3" HorizontalAlignment="Left" Margin="0,6,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c1f3_Click" Grid.Row="2" Grid.Column="0" Loaded="c1f3_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c1f4" HorizontalAlignment="Left" Margin="0,1.3,0,-0.8" VerticalAlignment="Top" Width="57" Height="54" Click="c1f4_Click" Grid.Row="3" Grid.Column="0" Loaded="c1f4_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c2f1" HorizontalAlignment="Left" Margin="0.4,0,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c2f1_Click" Grid.Column="1" Grid.Row="0" Loaded="c2f1_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c3f1" HorizontalAlignment="Left" Margin="2.4,0,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c3f1_Click" Grid.Column="2" Grid.Row="0" Loaded="c3f1_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c3f2" HorizontalAlignment="Left" Margin="2.4,1.4,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c3f2_Click" Grid.Column="2" Grid.Row="1" Grid.RowSpan="2"  Loaded="c3f2_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c2f2" HorizontalAlignment="Left" Margin="0.4,1.4,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c2f2_Click" Grid.Column="1" Grid.Row="1" Loaded="c2f2_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c4f1" HorizontalAlignment="Left" Margin="2.2,0,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c4f1_Click" Grid.Column="3" Grid.Row="0" Loaded="c4f1_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c2f3" HorizontalAlignment="Left" Margin="0.4,6,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c2f3_Click" Grid.Column="1" Grid.Row="2"  Loaded="c2f3_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c4f2" HorizontalAlignment="Left" Margin="2.2,1.4,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c4f2_Click" Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Loaded="c4f2_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c2f4" HorizontalAlignment="Left" Margin="0.4,1.3,0,-0.8" VerticalAlignment="Top" Width="57" Height="54" Click="c2f4_Click" Grid.Column="1" Grid.Row="3" Loaded="c2f4_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c3f3" HorizontalAlignment="Left" Margin="2.4,6,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c3f3_Click" Grid.Column="2" Grid.Row="2" Loaded="c3f3_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c3f4" HorizontalAlignment="Left" Margin="2.4,1.3,0,-0.8" VerticalAlignment="Top" Width="57" Height="54" Click="c3f4_Click" Grid.Column="2" Grid.Row="3" Loaded="c3f4_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c4f4" HorizontalAlignment="Left" Margin="2.2,1.3,0,-0.8" VerticalAlignment="Top" Width="57" Height="54" Click="c4f4_Click" Grid.Column="3" Grid.Row="3" Loaded="c4f4_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+            <Button x:Name="c4f3" HorizontalAlignment="Left" Margin="2.2,6,0,0" VerticalAlignment="Top" Width="57" Height="54" Click="c4f3_Click" Grid.Column="3" Grid.Row="2" Loaded="c4f3_Loaded">
+                <DockPanel>
+                    <Image Height="44" Source="asiento.png" Stretch="Fill" Width="39"/>
+                </DockPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
